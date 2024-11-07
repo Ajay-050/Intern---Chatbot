@@ -1,0 +1,18 @@
+[
+  {
+    "name": "mobile_number",
+    "pattern": "\\d{10}"
+  },
+  {
+    "name": "mobile_number",
+    "pattern": "^6\\d{10}"
+  },
+  {
+    "name": "mobile_number",
+    "pattern": "^8\\d{10}"
+  },
+  {
+    "name": "mobile_number",
+    "pattern": "^9\\d{10}"
+  }
+]

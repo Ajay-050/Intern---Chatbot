@@ -1,0 +1,328 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: get the details
+  steps:
+  - intent: send_message
+  - action: utter_ask_mobile
+  - intent: mobile_number
+    entities:
+    - number: "8247852517"
+  - slot_was_set:
+    - number: "8247852517"
+  - action: utter_ask_message
+  - intent: message_content
+    entities:
+    - message: "Hello, this is a test message."
+  - slot_was_set:
+    - message: "Hello, this is a test message."
+  - action: action_details
+
+
+- story: CC overview
+  steps:
+    - intent: Cloud Counselage Overview
+    - action: utter_cc_overview
+
+
+- story: CC Background
+  steps:
+    - intent: Cloud Counselage Background
+    - action: utter_cc_background
+
+- story: CC Servies
+  steps:
+    - intent: Cloud Counselage Operations and Services
+    - action: utter_cc_services
+
+- story: CC Social
+  steps:
+    - intent: Cloud Counselage Social Initiatives
+    - action: utter_cc_intern
+
+- story: CC Differentiation
+  steps:
+    - intent: Cloud Counselage Differentiation
+    - action: utter_cc_diff
+
+- story: IAC Enquiring
+  steps:
+    - intent: Enquiry IAC
+    - action: utter_enquiry_iac
+    - intent: More about IAC
+    - action: utter_more_iac
+
+- story: Benefits IAC
+  steps:
+    - intent: Benefits of IAC
+    - action: utter_benefits_iac
+
+- story: Paid Free
+  steps:
+    - intent: paid or free
+    - action: utter_paid_free
+
+- story: participate activities
+  steps:
+    - intent: participate all activities
+    - action: utter_participate_activity
+
+- story: work hours
+  steps:
+    - intent: work hours
+    - action: utter_work_hours
+
+- story: membership mandatory
+  steps:
+    - intent: mandatory to be a member
+    - action: utter_mandatory_member
+
+- story: flexibility
+  steps:
+    - intent: flexible in activities
+    - action: utter_flexibility_activities
+
+- story: helpful program
+  steps:
+    - intent: program helpful
+    - action: utter_helpful
+
+- story: intern conduct
+  steps:
+    - intent: conducting internship
+    - action: utter_internship_conduct
+
+- story: intern start date
+  steps:
+    - intent: internship start time
+    - action: utter_start_time
+
+- story: intern application
+  steps:
+    - intent: where to apply
+    - action: utter_where_intern_apply
+
+- story: criteria
+  steps:
+    - intent: selection criteria
+    - action: utter_eligibility_response
+
+- story: grads freshers
+  steps:
+    - intent: Grads and Freshers
+    - action: utter_grads_freshers
+
+- story: Offer Letters Certificates
+  steps:
+    - intent: Offer Letters and Certificates
+    - action: utter_offer_certificates
+
+- story: domains
+  steps:
+    - intent: Domains For Internship
+    - action: utter_domains
+
+- story: android development
+  steps:
+    - intent: Android Development
+    - action: utter_android
+
+- story: artificial intelligence
+  steps:
+    - intent: Artificial Intelligence
+    - action: utter_ai
+
+
+- story: business research
+  steps:
+    - intent: Business Research
+    - action: utter_busi_research 
+
+- story: business development
+  steps:
+    - intent: Business Development
+    - action: utter_busi_devlop
+
+- story: blockchain
+  steps:
+    - intent: Blockchain
+    - action: utter_blockchain 
+
+- story: cloud
+  steps:
+    - intent: Cloud Computing
+    - action: utter_cloud_comp
+
+- story: blockchain
+  steps:
+    - intent: Blockchain
+    - action: utter_blockchain
+
+- story: cyber
+  steps:
+    - intent: Cyber Security
+    - action: utter_cyber
+
+- story: digi market
+  steps:
+    - intent: Digital Marketing
+    - action: utter_digi_market
+
+- story: devops
+  steps:
+    - intent: DevOps
+    - action: utter_devops
+
+- story: data analytics
+  steps:
+    - intent: Data Analytics
+    - action: utter_data_analytics
+
+- story: flutter
+  steps:
+    - intent: Flutter
+    - action: utter_flutter
+
+- story: fullstack
+  steps:
+    - intent: Full Stack
+    - action: utter_fullstack
+
+- story: game development
+  steps:
+    - intent: Game Development
+    - action: utter_game_develop
+
+- story: human resources
+  steps:
+    - intent: Human Resources
+    - action: utter_human
+
+- story: java
+  steps:
+    - intent: Java
+    - action: utter_java
+
+- story: machine learning
+  steps:
+    - intent: Machine learning
+    - action: utter_ml
+
+- story: Node
+  steps:
+    - intent: Node.js
+    - action: utter_node
+
+- story: operations management
+  steps:
+    - intent: Operations Management
+    - action: utter_operations
+
+- story: python
+  steps:
+    - intent: Python
+    - action: utter_python
+
+- story: product management
+  steps:
+    - intent: Product Management
+    - action: utter_product
+
+- story: project management
+  steps:
+    - intent: Project Management
+    - action: utter_project_management
+
+- story: quality assurance
+  steps:
+    - intent: Quality Assurance
+    - action: utter_quality
+
+- story: react
+  steps:
+    - intent: React JS
+    - action: utter_react
+
+- story: ui_ux
+  steps:
+    - intent: UI UX
+    - action: utter_ui_ux
+
+- story: webdev
+  steps:
+    - intent: Web Development
+    - action: utter_web_dev
+
+- story: change in domain
+  steps:
+    - intent: Domain Change
+    - action: utter_domains_Change
+
+
+- story: Domain choosing
+  steps:
+    - intent: choose domain
+    - action: utter_choose_domain
+
+
+- story: Help in project
+  steps:
+    - intent: help during project
+    - action: utter_help_project
+
+- story: project completion
+  steps:
+    - intent: completion of internship
+    - action: utter_project_completion
+
+- story: more domains simultaneously
+  steps:
+    - intent: more than one domain
+    - action:  utter_more_than_one_domain
+
+- story: requirements
+  steps:
+    - intent: laptop required
+    - action: utter_laptop
+
+- story: group
+  steps:
+    - intent: group for updates or information
+    - action: utter_updates
+
+- story: unmatched intents
+  steps:
+    - intent: fallback
+    - action: utter_fallback
+
+
+
+

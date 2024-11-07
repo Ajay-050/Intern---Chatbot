@@ -1,0 +1,214 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  /* max-width: 450px; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* background: linear-gradient(to right,#6190E8,#A7BFE8); */
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(38,51,97,1) 0%, rgba(65,143,222,1) 79% );
+  /* background: linear-gradient(lightblue,white 60%); */
+}
+.app-hr{
+  border: 0;
+  height: 1px;
+  background: grey;
+  margin: 20px 0;
+}
+
+.bottom {
+  /* margin-top: 20px; */
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  gap: 10px;
+  padding-left: 10px;
+  width: 98%;
+}
+.bottom textarea{
+  height: 50px;
+  width: calc(100% - 60px);
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  /* background-color: rgb(27, 27, 27); */
+  /* background-color: black; */
+  background: linear-gradient( 86.3deg,  rgba(0,119,182,1) 3.6%, rgba(8,24,68,1) 87.6% );
+  resize: none;
+  overflow-y: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  border: none;
+  outline: none;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+.bottom button{
+  /* background: black; */
+  background: linear-gradient( 86.3deg,  rgba(0,119,182,1) 3.6%, rgba(8,24,68,1) 87.6% );
+  
+  color: white;
+  width: 100px;
+  border-radius: 15px;
+  font-size: 19px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+}
+.bottom button img{
+  width: 40px;
+  height: 40px;
+}
+
+.chat-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto; 
+  gap: 10px;
+  margin-top: 10px; /* Optional: Add margin between textarea and messages */
+  margin: 60px 100px 90px 100px;
+  padding-right: 20px;
+  scroll-behavior: smooth; 
+  
+}
+
+.msg-container.user{
+  display: flex;
+  justify-content: flex-end; /* Aligns user messages to the right */
+  margin-bottom: 10px; /* Optional: Adds spacing between messages */
+}
+
+.msg-container.Bot{
+  display: flex;
+  justify-content: flex-start; /* Aligns user messages to the right */
+  margin-bottom: 10px; /* Optional: Adds spacing between messages */
+}
+
+/* Styles for user messages */
+.message.user {
+  background-color: rgb(14, 14, 123);
+  /* User message background color */
+  color: white;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 20px;
+  max-width: 70%; /* Adjust maximum width for messages */
+  word-wrap: break-word; /* Wrap long words */
+  margin-right: 2px; /* Creates space between message and image */
+}
+
+/* Styles for bot messages */
+.message.Bot {
+  background-color: #2979FF; /* Bot message background color */
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 18px;
+  max-width: 70%; /* Adjust maximum width for messages */
+  word-wrap: break-word; /* Wrap long words */
+  margin-left: 10px; /* Creates space between message and image */
+}
+
+/* Styles for message images */
+.message-img {
+  display: flex;
+  align-items: center; /* Aligns images vertically */
+}
+
+/* Styles for user image */
+#user-img {
+  width: 30px; /* Adjust width of user image */
+  height: 30px; /* Adjust height of user image */
+  margin-left: 5px; /* Creates space between message text and image */
+}
+
+/* Styles for bot image */
+#cloud-img {
+  width: 30px; /* Adjust width of cloud image */
+  height: 30px; /* Adjust height of cloud image */
+  border-radius: 10px;
+}
+
+.intro{
+  font-size: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-left: 200px;
+  margin-right: 200px;
+  color: black;
+  background: linear-gradient(to right,white,cyan 90%);
+  padding: 30px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+@media(max-width:1270px){
+  .bottom textarea{
+      height: 30px;
+      font-size: 16px;
+  }
+  .chat-container{
+      margin-left: 60px;
+      margin-right: 60px;
+  }
+}
+@media(max-width:1024px){
+  .intro{
+    margin-left: 70px;
+    margin-right: 100px;
+    padding: 20px;
+    font-size: 20px;
+  }
+}
+@media(max-width:500px){
+  .intro{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 15px;
+    font-size: 16px;
+  }
+}
+@media(max-width:800px){
+  .bottom textarea{
+      height: 30px;
+      font-size: 16px;
+  }
+  .bottom button{
+      width: 70px;
+  }
+  .bottom button img{
+      width: 30px;
+      height: 30px;
+  }
+  .chat-container {
+      margin-left: 50px;
+      margin-right: 50px;
+  }
+  
+}
+@media(max-width:500px){
+  .bottom textarea{
+      height: 30px;
+      font-size: 14px;
+  }
+  .chat-container{
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  .message.Bot{
+    font-size: 16px;
+    max-width: 60%;
+    padding: 15px;
+  }
+  .message.user{
+    font-size: 16px;
+    max-width: 60%;
+    padding: 15px;
+  }
+}

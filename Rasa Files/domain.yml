@@ -1,0 +1,570 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - send_message
+  
+  - mobile_number:
+      use_entities:
+        - number
+  - message_content:
+      use_entities:
+        - message
+
+  - Cloud Counselage Overview
+  - Cloud Counselage Background
+  - Cloud Counselage Operations and Services
+  - Cloud Counselage Social Initiatives
+  - Cloud Counselage Differentiation
+  - Enquiry IAC
+  - More about IAC
+  - Benefits of IAC
+  - paid or free
+  - participate all activities
+  - work hours
+  - mandatory to be a member
+  - flexible in activities
+  - program helpful
+  - conducting internship
+  - internship start time
+  - where to apply
+  - selection criteria
+  - Grads and Freshers
+  - Offer Letters and Certificates
+  - Domains For Internship
+  - Android Development
+  - Artificial Intelligence
+  - Business Research
+  - Business Development
+  - Blockchain
+  - Cloud Computing
+  - Cyber Security
+  - Digital Marketing
+  - DevOps
+  - Data Analytics
+  - Flutter
+  - Full Stack
+  - Game Development
+  - Human Resources
+  - Java
+  - Machine learning
+  - Node.js
+  - Operations Management
+  - Python
+  - Product Management
+  - Project Management
+  - Quality Assurance
+  - React JS
+  - UI UX
+  - Web Development
+  - Domain Change
+  - choose domain
+  - help during project
+  - completion of internship
+  - more than one domain
+  - laptop required
+  - group for updates or information
+  - fallback
+
+entities:
+  - domain
+  - number 
+  - message
+
+slots:
+  number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: number
+
+  message:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: message
+
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_mobile:
+  - text: "Provide me your mobile number."
+
+  utter_ask_message:
+  - text: "Provide me the text you want to send"
+
+
+  utter_cc_overview:
+  - text: "Cloud Counselage is a consulting firm based in Mumbai, India, established in 2015. It specializes in IT and 
+  business management services, catering primarily to startups and small to medium enterprises (SMEs). The company 
+  provides a range of services, including recruitment, IT solutions, and business management consulting, aimed at helping 
+  businesses streamline their operations and achieve growth. The mission of Cloud Counselage is to bridge the gap between 
+  academia and industry by providing students and fresh graduates with practical experience and industry exposure, thereby 
+  enhancing their employability. Their vision is to eradicate unemployability among Indian youth and to support the 
+  growth of startups and SMEs through innovative and customized solutions."
+
+  utter_cc_background:
+  - text: "
+  Cloud Counselage, an Indian firm specializing in cybersecurity and consulting services, was founded by Tushar Ajinkya. 
+  Harshada Topale and Subhi Shildhankar as co-founders, headquartered in Mumbai, India, the company offers a range of services including cloud security, risk management, and 
+  digital transformation solutions to businesses globally."
+
+  utter_cc_services:
+  - text: "Cloud Counselage serves a diverse array of industries including banking and financial services, healthcare, 
+  telecommunications, retail, and manufacturing, among others. The firm specializes in providing consulting services 
+  such as cybersecurity, cloud security, risk management, compliance, and digital transformation strategies. 
+  Cloud Counselage supports startups and SMEs by offering tailored advisory services aimed at enhancing cybersecurity 
+  frameworks, implementing efficient cloud solutions, and providing strategic guidance for sustainable growth and 
+  resilience in the digital age."
+
+  utter_cc_intern:
+  - text: "Cloud Counselage's Industry Academia Community initiative focuses on bridging the gap between industry 
+  requirements and academic curriculum through collaborations with educational institutions and industry partners. 
+  This initiative aims to equip students with practical skills and knowledge aligned with current industry trends, 
+  thereby enhancing their employability upon graduation. To reduce unemployability among Indian youth, Cloud Counselage 
+  conducts skill development workshops, seminars, and training programs that address industry-specific needs and 
+  provide hands-on experience in cybersecurity, cloud computing, and related fields. Additionally, Cloud Counselage's 
+  internship program plays a crucial role in offering practical exposure to students and young professionals, allowing 
+  them to apply theoretical knowledge in real-world scenarios and gain valuable insights into the industry practices and 
+  challenges. These initiatives collectively contribute to preparing the youth for successful careers in the evolving 
+  digital landscape."
+
+  utter_cc_diff:
+  - text: "Cloud Counselage sets itself apart by focusing intensely on cybersecurity and digital transformation, 
+  tailored specifically to address the unique challenges faced by businesses across diverse industries. 
+  Their distinct value proposition lies in offering end-to-end solutions encompassing cybersecurity strategy, 
+  risk management, compliance, and cloud security, underpinned by deep industry expertise and innovative approaches. 
+  This approach ensures robust protection of sensitive data, regulatory compliance, and enhanced operational efficiency 
+  for clients. Successful projects include bolstering cybersecurity frameworks for financial institutions, implementing 
+  secure cloud solutions in healthcare, and facilitating smooth digital transformations in telecommunications, all 
+  contributing to sustained business resilience and competitive advantage."
+
+  utter_enquiry_iac:
+  - text: "Industry-Academia Community (IAC) is a part of 'Industry-Academia Connect' initiative 
+  of Cloud Counselage Pvt. Ltd. in association with Gift-A-Career Foundation created for 
+  Industry & Academia PAN India. This community engages and supports higher education students and 
+  freshers by providing them with 360-degree professional development and career growth
+  opportunities through Career Vision, Career Guidance, Industry & Corporate Exposure, 
+  and Hands-on experience/remote internships on live projects. All the benefits of the community
+  can be availed from any corner of the world as it is an online community and at no cost to the members."
+
+  utter_more_iac:
+  - text: "The Industry-Academia Community (IAC) is part of the 'Industry-Academia Connect' 
+  initiative by Cloud Counselage Pvt. Ltd aimed at supporting higher education students and freshers across 
+  India. It offers 360-degree professional development and career growth opportunities through 
+  career guidance, industry exposure, and hands-on internships on live projects. 
+  Members can access all benefits online from anywhere in the world at no cost.
+  The Community offers 6 roles IAC Member, Community Ambassador, Community Lead, Community Manager,
+  IAC Associate, Domain Lead. Each role is designed to foster leadership, collaboration, and 
+  professional growth within the community. By taking on these roles, members can significantly enhance their skills and expand their professional networks."
+
+  utter_benefits_iac:
+  - text: "Here are the Benefits of being part in IAC\n 1.Industry Exposure Workshops\n2.Career Vision\n3.Career Guidance\n4.Industry Training\n5.Internship Program\n6.Industry Visits\n7.CV & Interview Preparations\n8.Soft Skills Workshops\n9.Career Assessments\n10.Hackathons\n11.Job Placements\n12.Entrepreneurship Program\n"
+
+  utter_paid_free:
+  - text: "This community is created with the intent to eradicate the perpetual unemployability 
+  issue amongst the fresh graduates of India. Cloud Counselage is committed to this social cause and 
+  therefore the students can be part of this community at no cost. They do not pay any fees and 
+  there are no hidden charges for being part of this community and for availing the benefits 
+  of the programs offered through this community."
+
+
+  utter_participate_activity:
+  - text: "You can participate in any activities of your choice. However, each activity has its own benefit. 
+  The more activities that you participate in the more career/job-ready you become."
+
+  utter_work_hours:
+  - text: "You are expected to spend 1-2 hours a week completing the professional development activities 
+  under IAC. This will ensure continuous professional development."
+
+  utter_mandatory_member:
+  - text: "You agree to become a member of the community as soon as you sign up for the app or express 
+  interest to join the community. The benefits of the app and in turn, the community are only 
+  available to the community members. Moreover, there are no fees to become a member of the community."
+
+  utter_flexibility_activities:
+  - text: "Absolutely! We understand students busy academic schedules, so we offer flexible 
+  participation in activities. Events are held at specific times, but recordings are available. 
+  During internships, students can work at their own pace, with the requirement to meet submission deadlines."
+
+
+  utter_helpful:
+  - text: "More than 90% of the community members have rated us 4 & 5 out of 5 for their overall 
+  experience of the activities. The reviews of the participant are available on our 
+  iReviews page and social media pages. The students have experienced a boost in confidence, 
+  especially during the interview, were able to channelize the interview, and have been placed in 
+  companies like Oracle, Microsoft, Capgemini, TCS, Wipro, Deloitte, etc. In terms of higher 
+  education, they were able to secure places in reputed universities in U.S., Australia, Ireland, etc."
+
+  utter_internship_conduct:
+  - text: "This is a 6-12 weeks online internship, that will be conducted during the vacation (generally) 
+  and you can choose any of one domain from the ones that we offer. This is a guaranteed internship 
+  for all the students in the age group of 17-24 years who aspire to IT & Management careers. 
+  There will be no interviews or aptitude tests required for participating in this internship. 
+  To keep the internship focused and reduce the stress to the students we allow working on only one 
+  technology at a time. The interns who have successfully submitted the project, get an experience certificate. 
+  The interns who have performed exceptionally well and have delivered high-quality deliverables are provided 
+  with letters of appreciation' as well and are facilitated in the Industry Academia Excellence Awards."
+
+
+  utter_start_time:
+  - text: "You can start your internship at any time."
+
+  utter_where_intern_apply:
+  - text: "Please click the link to sign up for the free online internship: \n https://www.industryacademiacommunity.com/courses/Internships."
+
+  utter_eligibility_response:
+  - text: "This internship is designed for students in higher education courses and any such 
+  student aspiring for IT and Management career can participate in this internship."
+
+  utter_grads_freshers:
+  - text: "This internship program is designed for undergraduate students but if graduates 
+  and freshers feel it is beneficial for them then they can participate in this internship program."
+
+  utter_offer_certificates:
+  - text: "The participants will get the following certificates and letters: 
+  \n1. An  Appointment letter can be generated immediately after attending the induction. 
+  \n2. Industry Training Certificate (further to completing post-session assessment) 
+  \n3. Experience Letter from Cloud Counselage (on successful completion of internship) 
+  \n4. Appreciation letter/certificate ( For top performers)"
+
+  utter_domains:
+  - text: "1.Android Development\n2.Artificial Intelligence\n3.Business Research\n4.Business Development 
+\n5.Blockchain\n6.Cloud Computing\n7.Cyber Security\n8.Digital Marketing\n9.DevOps\n10.Data Analytics\n11.Flutter
+\n12.Full Stack\n13.Game Development\n14.Human Resources\n15.Java\n16.Machine Learning\n17.Node.js
+\n18.Operations Management\n19.Python\n20.Product Management\n21.Project Management\n22.Quality Assurance
+\n23.React JS\n24.UI/UX\n25.Web Development"
+
+  utter_android:
+  - text: "Android development powers a significant portion of the global mobile market, providing businesses
+  with access to a vast user base. It enables the creation of versatile and feature-rich applications, enhancing user engagement and satisfaction. Additionally, Android's open-source nature fosters 
+  innovation and customization, allowing developers to tailor solutions to specific needs. Lastly, it supports a wide range of devices, ensuring broad compatibility and reach for apps. \n To enhance your 
+  Android development skills, start the free internship offered by Cloud Counselage.\n Click here to start your 
+  internship:\n https://cloudcounselage.graphy.com/courses/Live-Project-Android-App-Development-64c52f21e4b0f2b9c7005940.
+  \n All the best for your internship."
+ 
+  utter_ai:
+  - text: "AI enhances efficiency and productivity by automating repetitive tasks and making data-driven decisions.It 
+  improves accuracy and reduces human error in various fields such as healthcare, finance, and manufacturing.AI also 
+  enables advancements in technology, driving innovation and new solutions for complex problems.Additionally, it helps in 
+  understanding and processing large volumes of data, providing valuable insights and fostering better decision-making.The 
+  potential of AI to revolutionize industries and improve quality of life makes it a critical area of focus.\nTo enhance 
+  your Artificial Intelligence skills, start the free internship offered by Cloud Counselage.\nClick here to start your 
+  internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Artificial-Intelligence-6495a28ee4b0f3ca2a043cff.
+  \nAll the best for your internship."
+
+  utter_busi_research:
+  - text: "Business research provides insights into market trends, customer behavior, and 
+  competitive landscapes, helping companies make informed decisions. It aids in identifying opportunities and 
+  threats, allowing businesses to strategize effectively and stay ahead of the competition. By understanding consumer 
+  needs and preferences, companies can tailor their products and services to better meet market demands. 
+  Business research also helps in optimizing marketing efforts, improving operational efficiency, and driving innovation. 
+  Ultimately, it supports sustainable growth and long-term success by providing a solid foundation for strategic 
+  planning and decision-making.\nTo enhance your Business Research skills, start the free internship offered by Cloud Counselage.\nClick here to start your 
+  internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Business-Research-64c73737e4b02b4dee615016.
+  \nAll the best for your internship."
+
+  utter_busi_devlop:
+  - text: "Business development drives growth by identifying new market opportunities and expanding the customer base. 
+  It fosters strategic partnerships and collaborations, enhancing a company's reach and resources. By focusing on 
+  long-term value creation, business development helps in optimizing revenue streams and improving profitability. 
+  It also enables companies to adapt to changing market conditions and stay competitive. Moreover, effective 
+  business development strategies lead to innovation and diversification, ensuring the company's sustainability and 
+  resilience in a dynamic business environment.\nTo enhance your Business Development skills, start the free internship offered by Cloud Counselage.\nClick here to start your 
+  internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Business-Development-64c73596e4b001e0e5e1d77e.
+  \nAll the best for your internship."
+
+  utter_blockchain:
+  - text: "Blockchain provides a secure, decentralized way to record and verify transactions, enhancing transparency and 
+  trust in various industries. It eliminates the need for intermediaries, reducing costs and inefficiencies. The 
+  technology ensures data integrity through cryptographic techniques, making it highly resistant to tampering and fraud. 
+  Blockchain's decentralized nature increases security, as there is no single point of failure. Additionally, it 
+  enables the creation of smart contracts, which automate and enforce agreements without human intervention.\nTo enhance 
+  your Blockchain skills, start the free internship offered by Cloud Counselage.\nClick here to start your 
+  internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Blockchain-Web-3-64c52face4b0f2b9c700595d.
+  \nAll the best for your internship"
+
+  utter_cloud_comp:
+  - text: "Cloud computing provides scalable and flexible resources, allowing businesses to efficiently manage their IT 
+  needs without significant upfront investment. It enhances accessibility, enabling users to access data and applications 
+  from anywhere with an internet connection. Cloud services improve collaboration by offering real-time data sharing and 
+  synchronization. They also offer robust security measures and backup solutions, ensuring data protection and disaster 
+  recovery. Additionally, cloud computing supports innovation and agility, allowing businesses to quickly deploy and 
+  scale new applications and services.\nTo enhance your Cloud Computing skills, start the free internship offered by Cloud Counselage.\nClick here to start your 
+  internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Cloud-Computing-64c5302ee4b0f2b9c7005980. 
+  \nAll the best for your internship."
+
+  utter_cyber:
+  - text: "Cybersecurity protects sensitive data from unauthorized access, theft, and damage, ensuring the privacy and 
+  integrity of information. It safeguards critical infrastructure, preventing disruptions that can have widespread 
+  impacts on society and the economy. By defending against cyberattacks, cybersecurity helps maintain trust in digital 
+  systems and services. It also prevents financial losses and reputational damage for businesses. Additionally, robust 
+  cybersecurity measures are essential for complying with regulatory requirements and protecting national security.\nTo 
+  enhance your Cyber Security skills, start the free internship offered by Cloud Counselage.\nClick here to start your 
+  internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Cyber-Security-64c53090e4b0f2b9c700599b. 
+  \nAll the best for your internship."
+
+  utter_digi_market:
+  - text: "Digital marketing allows businesses to reach a global audience with precision and cost-effectiveness. 
+  It provides measurable results through analytics, enabling companies to optimize their strategies in real-time. 
+  Digital marketing enhances engagement by targeting specific demographics and personalizing content. It also boosts 
+  brand visibility and credibility through online presence and social media interactions. Additionally, digital marketing 
+  supports customer relationships by facilitating direct communication and feedback, leading to improved customer 
+  satisfaction and loyalty.\nTo enhance your Digital Marketing skills, start the free internship offered by Cloud Counselage.\nClick here to start your 
+  internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Digital-Marketing-64c5d632e4b0537c2222a46f. 
+  \nAll the best for your internship."
+
+  utter_devops:
+  - text: "DevOps bridges the gap between development and operations teams, enhancing collaboration and efficiency. 
+  It accelerates the software development lifecycle, enabling faster delivery of features and updates. DevOps practices 
+  improve the reliability and stability of applications by promoting continuous integration and continuous deployment (CI/CD). 
+  It also enhances scalability and flexibility, allowing organizations to quickly adapt to changing market demands. 
+  Additionally, DevOps fosters a culture of continuous improvement, encouraging innovation and reducing the time to 
+  market for new products and services.\nTo enhance your DevOps skills, start the free internship offered by Cloud Counselage.\nClick here to start your 
+  internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-DevOps-64c530eee4b0f2b9c70059b3. 
+  \nAll the best for your internship."
+
+  utter_data_analytics:
+  - text: "Data analytics enables organizations to make informed decisions based on insights derived from data.It 
+  helps identify trends, patterns, and correlations that can drive strategic planning and competitive advantage. 
+  Data analytics improves operational efficiency by optimizing processes and resource allocation.It enhances 
+  customer understanding, allowing for personalized experiences and targeted marketing. Additionally, data analytics 
+  supports risk management by detecting anomalies and predicting potential issues.Overall, it empowers businesses 
+  to innovate and stay ahead in a data-driven world.\nTo enhance your Data Analytics skills, start the free internship offered by Cloud Counselage.\nClick here to start your 
+  internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Data-Analytics-64c5d71be4b0537c2222a58b. 
+  \nAll the best for your internship."
+
+  utter_flutter:
+  - text: "Flutter allows developers to build cross-platform mobile applications with a single codebase, reducing 
+  development time and costs significantly. It provides a rich set of pre-designed widgets and tools that streamline 
+  the UI development process, ensuring consistent and appealing user interfaces across different devices. Flutter's hot 
+  reload feature enables real-time updates, making iterative development and debugging faster and more efficient. It 
+  supports native performance by compiling directly to native ARM code, ensuring smooth and responsive app experiences. 
+  Additionally, Flutter is backed by Google and has a growing community, offering extensive support, resources, and 
+  plugins for developers.\nTo enhance your Flutter skills, start the free internship offered by Cloud Counselage.\nClick here to start your 
+  internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Flutter-64c53150e4b0f2b9c70059e9.
+  \nAll the best for your internship."
+
+  utter_fullstack:
+  - text: "Full stack development equips developers with the skills to work on both the front-end and back-end aspects of 
+  web applications. This versatility allows for seamless integration of different components, enhancing overall application 
+  functionality and user experience. Full stack developers can effectively troubleshoot and optimize both client-side and 
+  server-side code, leading to faster development cycles and reduced dependencies on specialized teams. They have a 
+  comprehensive understanding of the entire software development process, enabling them to create cohesive and scalable 
+  solutions. Additionally, full stack developers are well-positioned to adapt to evolving technologies and contribute to 
+  various aspects of projects, making them valuable assets to development teams.\nTo enhance your Full Stack skills, start the free internship offered by Cloud Counselage.\nClick here to start your 
+  internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Fullstack-Development-64c531a3e4b0f2b9c70059f8.
+  \nAll the best for your internship."
+
+  utter_game_develop:
+  - text: "Game development combines creativity with technology to create immersive and engaging experiences for users. 
+  It drives innovation in graphics, animation, and interactive storytelling, pushing the boundaries of what digital 
+  entertainment can offer. Games have a global appeal, reaching diverse audiences and cultures, making them a powerful 
+  medium for cultural exchange and education. Game development also stimulates economic growth, supporting a thriving 
+  industry with opportunities for developers, artists, and designers. Additionally, games foster social connections and 
+  collaboration through multiplayer experiences, enhancing social interaction and community building.\nTo enhance your Game Development 
+  skills, start the free internship offered by Cloud Counselage.\nClick here to start your internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Game-Development-64c532dbe4b094869766f3c0. 
+  \nAll the best for your internship."
+
+  utter_human:
+  - text: "Human resources (HR) manages an organization's most valuable asset: its people. HR ensures that the 
+  workforce is well-trained, motivated, and aligned with the company's goals and values. It plays a crucial role 
+  in recruiting and retaining talent, fostering a positive work environment, and promoting employee satisfaction and 
+  productivity. HR departments also handle compliance with labor laws and regulations, mitigating risks and ensuring 
+  fair treatment of employees. Moreover, HR professionals contribute to organizational development by implementing 
+  strategies for career development, succession planning, and diversity and inclusion initiatives.\nTo enhance your 
+  Human Resources skills, start the free internship offered by Cloud Counselage.\nClick here to start your 
+  internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-HR-Management-64c50d07e4b00da258fc7ff1. 
+  \nAll the best for your internship."
+
+  utter_java:
+  - text: "Java is a versatile and widely-used programming language that powers a vast array of applications, from 
+  enterprise systems to mobile apps and web development. It offers platform independence through its write once, run
+  anywhere philosophy, making it accessible across different operating systems and devices. Java's strong community
+  support and extensive libraries facilitate rapid development and scalability of projects. It is known for its robust
+  security features, which protect against vulnerabilities and ensure safe execution of applications.
+  Additionally, Java's object-oriented programming paradigm promotes code reusability, maintainability, and flexibility,
+  making it a preferred choice for large-scale software development.\nTo enhance your Java skills, start the free internship offered by Cloud Counselage.
+  \nClick here to start your internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Java-64c53343e4b094869766f3d4
+  \nAll the best for your internship."
+
+  utter_ml:
+  - text: "Machine learning enables computers to learn from data and make predictions or decisions without explicit programming. 
+  It automates analytical model building, allowing organizations to uncover insights and patterns in large datasets that 
+  would be difficult or impossible for humans to identify manually. Machine learning powers applications across various 
+  domains, including healthcare, finance, marketing, and autonomous systems. It enhances efficiency by automating 
+  repetitive tasks and optimizing processes. Additionally, machine learning algorithms improve over time with more data, 
+  continually refining predictions and recommendations, which is crucial for staying competitive in today's data-driven 
+  economy.\nTo enhance your Machine Learning skills, start the free internship offered by Cloud Counselage.
+  \nClick here to start your internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Machine-Learning-64c533e6e4b0a40ebd03ae5f
+  \nAll the best for your internship."
+
+  utter_node:
+  - text: "Node.js allows developers to build scalable and efficient server-side applications using JavaScript. 
+  It utilizes an event-driven, non-blocking I/O model that makes it lightweight and capable of handling a large number 
+  of simultaneous connections. Node.js is well-suited for real-time applications like chatbots, streaming services, and 
+  multiplayer games, where responsiveness and performance are critical. It facilitates the development of full stack 
+  applications by enabling JavaScript to run on both the client and server sides, reducing the need for context switching 
+  and improving development speed. Additionally, Node.js has a vibrant ecosystem with a wide range of libraries and 
+  frameworks that simplify development and deployment processes.\nTo enhance your Node.js skills, start the free internship offered by Cloud Counselage.
+  \nClick here to start your internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-NodeJs-64c53447e4b0a40ebd03ae69.
+  \nAll the best for your internship."
+
+  utter_operations:
+  - text: "Operations management ensures efficient and effective utilization of resources to achieve organizational 
+  goals. It involves overseeing the production processes, managing inventory levels, and optimizing workflows to 
+  minimize costs and maximize productivity. Effective operations management improves customer satisfaction by ensuring 
+  timely delivery of products and services while maintaining quality standards. It also plays a crucial role in risk 
+  management and business continuity planning, identifying potential disruptions and implementing strategies to mitigate 
+  them. Ultimately, operations management is essential for maintaining competitiveness, profitability, and sustainability 
+  in today's competitive business environment.\nTo enhance your Operatiions Management skills, start the free internship offered by Cloud Counselage.
+  \nClick here to start your internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Operations-Management-64c76200e4b082a06d089c4d
+  \nAll the best for your internship."
+  
+  utter_python:
+  - text: "Python is a versatile, high-level programming language known for its simplicity and readability, making 
+  it accessible to beginners and powerful for experienced developers. It supports multiple programming paradigms, 
+  including procedural, object-oriented, and functional programming, accommodating diverse application needs. 
+  Python's extensive standard library and rich ecosystem of third-party packages facilitate rapid development of 
+  various applications, from web development to scientific computing and artificial intelligence. Its interpreted 
+  nature allows for interactive and exploratory programming, aiding in quick prototyping and testing of ideas. 
+  Moreover, Python's community-driven development and open-source ethos contribute to its popularity and continuous 
+  evolution as a preferred language for diverse programming tasks.\nTo enhance your Python skills, start the free internship offered by Cloud Counselage.
+  \nClick here to start your internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Python-64c53501e4b00da258fc8d6b.
+  \nAll the best for your internship."
+
+  utter_product:
+  - text: "Product management bridges the gap between customer needs and business objectives, ensuring that products 
+  meet market demand and achieve profitability. It involves defining a product vision, strategy, and roadmap based on 
+  market research and customer feedback, guiding its development from conception to launch and beyond. Effective 
+  product management maximizes return on investment by prioritizing features and enhancements that deliver the most 
+  value to users. It fosters cross-functional collaboration among teams such as engineering, marketing, and sales, 
+  ensuring alignment and smooth execution. Ultimately, product management drives innovation, growth, and competitive 
+  advantage in the marketplace.\nTo enhance your Product Management skills, start the free internship offered by Cloud Counselage.
+  \nClick here to start your internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Product-Management-64c52cb5e4b094869766f1c8
+  \nAll the best for your internship."
+
+  utter_project_management:
+  - text: "Project management ensures projects are completed on time, within budget, and according to specifications. 
+  It involves planning, organizing, and coordinating resources, tasks, and activities to achieve specific goals and 
+  deliverables. Effective project management minimizes risks, identifies dependencies, and mitigates issues that may 
+  arise during project execution, ensuring smooth progress and quality outcomes. It enhances communication and 
+  collaboration among team members and stakeholders, fostering a unified approach towards project success. 
+  Project management methodologies and tools provide structure and clarity, enabling teams to maintain focus, meet 
+  deadlines, and adapt to changes efficiently. Ultimately, project management is crucial for achieving business 
+  objectives and driving organizational success.\nTo enhance your Project Management skills, start the free internship offered by Cloud Counselage.
+  \nClick here to start your internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Project-Management-64c52e05e4b0abe3bbd8450a.
+  \nAll the best for your internship."
+
+  utter_quality:
+  - text: "Quality assurance (QA) ensures that products and services meet or exceed customer expectations and regulatory 
+  requirements. It involves systematic monitoring, evaluation, and improvement of processes to deliver consistent quality 
+  and reliability. QA practices identify defects and issues early in the development lifecycle, reducing rework and 
+  minimizing costs. By maintaining high standards, QA enhances customer satisfaction, loyalty, and brand reputation. 
+  It also supports continuous improvement and innovation by providing feedback for refining processes and enhancing 
+  product features. Ultimately, quality assurance contributes to long-term business success and competitiveness in the 
+  market.\nTo enhance your Quality Assurance skills, start the free internship offered by Cloud Counselage.
+  \nClick here to start your internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Quality-Assurance-64c5355ee4b00da258fc8d7b.
+  \nAll the best for your internship."
+
+  utter_react:
+  - text: "React.js revolutionizes the way web applications are built by offering a component-based architecture that 
+  enhances code reusability and maintainability. It enables developers to create interactive and dynamic user interfaces 
+  efficiently through its virtual DOM and one-way data binding, ensuring optimal performance. React's declarative 
+  approach simplifies UI development by efficiently managing updates and state changes, improving developer productivity. 
+  It enjoys strong community support and a rich ecosystem of libraries and tools, facilitating rapid development and 
+  deployment of scalable applications. React.js is widely adopted by major companies and startups alike, making it a 
+  valuable skillset in modern web development.\nTo enhance your React JS skills, start the free internship offered by Cloud Counselage.
+  \nClick here to start your internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-ReactJs-64c535ace4b00da258fc8d8b.
+  \nAll the best for your internship."
+
+  utter_ui_ux:
+  - text: "UI/UX (User Interface/User Experience) design influences how users interact with and perceive a product or service. 
+  A well-designed UI/UX enhances usability by making interfaces intuitive, efficient, and enjoyable to use, leading to 
+  higher user satisfaction and retention. It improves accessibility by ensuring that users of all abilities can navigate 
+  and interact with the application effectively. Good UI/UX design also drives business outcomes by increasing conversions, 
+  reducing bounce rates, and encouraging repeat usage. It involves understanding user needs through research and testing, 
+  iterating designs based on feedback, and continuously optimizing the user experience to align with evolving expectations 
+  and technologies.\nTo enhance your UI/UX skills, start the free internship offered by Cloud Counselage.
+  \nClick here to start your internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-UIUX-Design-64c53633e4b00da258fc8db1.
+  \nAll the best for your internship."
+
+  utter_web_dev:
+  - text: "Web development enables businesses and individuals to establish an online presence and reach a global audience. 
+  It facilitates communication, information sharing, and transactions across various platforms and devices. 
+  Web development supports e-commerce by providing secure and scalable solutions for selling products and services online. 
+  It fosters innovation through the creation of interactive and dynamic web applications that enhance user engagement and satisfaction. 
+  Additionally, web development drives digital marketing efforts, improves brand visibility, and enables businesses to stay 
+  competitive in the digital age by adapting to changing consumer behaviors and technological advancements.\nTo enhance your Web Development skills, 
+  start the free internship offered by Cloud Counselage.\nClick here to start your internship:\nhttps://cloudcounselage.graphy.com/courses/Live-Project-Web-Development-64c53685e4b00da258fc8dbd.
+  \nAll the best for your internship."
+
+  utter_domains_Change:
+  - text: "You can intern in any domain you choose. Once you choose a domain you can continue 
+  working on the same and submit the project. After which you can choose other domain. 
+  This will help you to focus much better."
+
+  utter_choose_domain:
+  - text: "A form will be made available to the interns to choose the domain and the duration of the internship."
+
+  utter_help_project:
+  - text: " Participants will get help related to understanding the problem statement and the project delivery process."
+
+  utter_project_completion:
+  - text: "The interns have to complete the tasks as per the instructions within the deadlines."
+
+  utter_more_than_one_domain:
+  - text: "We encourage focusing on one field at a time as this will help yield better results."
+
+  utter_laptop:
+  - text: "Yes, to work efficiently, you need a high-quality laptop and robust internet connectivity are crucial to maintaining productivity and staying connected with the world."
+
+  utter_updates:
+  - text: "Please Join
+  \n[Telegram](Telegram Channel: https://t.me/+uXmD1vTLpttjN2Vl)
+  \n[Whatsapp](WhatsApp Channel: https://whatsapp.com/channel/0029VaKRwJ6GOj9lRe7Jgw1p)"
+
+  utter_fallback:
+  - text: "I'm sorry, I didn't quite catch that. Could you please provide more details or ask your question in a different way?"
+
+actions:
+  - action_details
+
+# forms:
+#   user_details_form:
+#     required_slots:
+#       name:
+#        - entity: name
+#       number:
+#        - entity: number
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

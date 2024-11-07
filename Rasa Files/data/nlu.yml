@@ -1,0 +1,1148 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: mobile_number
+  examples: |
+    - my number is [8247852517]{"entity":"number"}
+    - Here's my phone number [3720382789]{"entity":"number"}
+    - Take my phone number [9872369881]{"entity":"number"}
+    - My number [7398712265]{"entity":"number"}
+    - [6818329217]{"entity":"number"}
+    - [7562718516]{"entity":"number"} is my number
+
+- regex: number
+  examples: |
+    - \d{10}
+    - ^8\d{10}
+    - ^9\d{10}
+    - ^6\d{10}
+
+- intent: send_message
+  examples: |
+    - i want to send a message
+    - i would like to send a message
+    - i need to send a text to someone
+    - can i send a text 
+    - Send a message
+    - Send an SMS
+    - Help me send a message
+    - Can you send a message for me?
+    - I'd like to send a text message
+    - Please send a message for me
+    - How can I send a message?
+    - I need help sending a message
+    - Can you help me send a message?
+    - I want to send a text
+    - Can I send a message?
+    - I need to send a message to someone
+  
+
+- intent: message_content
+  examples: |
+    - Hello, this is a test message.
+    - Please call me back.
+    - I will be there at 5 PM.
+    - This is a reminder for our meeting.
+    - Hi there, how are you?
+    - Can you pick up some groceries?
+    - Don't forget about our appointment tomorrow.
+    - I'll be late to the meeting.
+    - Let's catch up soon.
+    - Have a great day!
+
+- intent: Cloud Counselage Overview
+  examples: |
+    - What is cloud counselage(company)?
+    - what is this company about?
+    - what is this company?
+    - What is this cloud counselage(company) about?
+    - Who is Cloud Counselage(company)?
+    - Tell me about this company.
+    - What can you tell me about cloud counselage(company) about?
+    - What is Cloud Counselage(company) and what services do they provide?
+    - Can you describe the mission and vision of Cloud Counselage(company)?
+    - Describe the mission and vision of this company.
+    - Could you give me an overview of Cloud Counselage(company)?
+    - What are the primary offerings of Cloud Counselage(company)?
+    - How would you define Cloud Counselage(company) in the consulting industry?
+    - What does Cloud Counselage(company) specialize in?
+    - Specializations of this company.
+    - Can you explain the core objectives of Cloud Counselage(company)?
+    - Core objectives of this company.
+    - What are the goals and aspirations of Cloud Counselage(company)?
+    - Goals and aspirations of this company.
+    - What are the main areas of expertise for Cloud Counselage(company)?
+    - Could you outline the services provided by Cloud Counselage(company)?
+    - services provided by the company.
+    - What is the mission and vision statement of Cloud Counselage(company)?
+    
+
+- intent: Cloud Counselage Background
+  examples: |
+    - When was Cloud Counselage(company) founded?
+    - When the company was founded?
+    - Who are the founders of Cloud Counselage(company)?
+    - Founders of company.
+    - Where is Cloud Counselage(company) headquartered?
+    - WHere is CLoud Counselage(company) located?
+    - where is cloud counselage(company)?
+    - location of cloud counselage(company).
+    - What is the history behind Cloud Counselage(company)?
+    - History of this company.
+    - Who established Cloud Counselage(company)?
+    - Where did the idea for Cloud Counselage(company) originate?
+    - Origin of this company.
+    - Can you provide a brief timeline of Cloud Counselage's founding and growth?
+    - can you provide a brief timeline of company's founding and growth?
+    - Who are the key figures behind the establishment of Cloud Counselage(company)?
+    - In which city or country did Cloud Counselage(company) start its operations?
+    - What prompted the founding of Cloud Counselage(company)?
+    - Could you give me some background information about Cloud Counselage(company)?
+    - Who were the initial leaders of Cloud Counselage(company)?
+    - Leaders of this Company.
+    - What led to the formation of Cloud Counselage(company)?
+    - Formation of this company.
+
+- intent: Cloud Counselage Operations and Services
+  examples: |
+    - What industries does Cloud Counselage(company) serve?
+    - What are services provided by the cloud counselage(company) company?
+    - Services by the company.
+    - What are the main consulting services offered by Cloud Counselage(company)?
+    - How does Cloud Counselage(company) support startups and SMEs?
+    - Which industries benefit from Cloud Counselage's(company's) services?
+    - What sectors does Cloud Counselage(company) cater to?
+    - What specific consulting services does Cloud Counselage(company) provide?
+    - How does Cloud Counselage(company) assist startups and small businesses?
+    - What support does Cloud Counselage(company) offer to SMEs?
+    - Can you describe the industries Cloud Counselage(company) serves?
+    - What are the primary areas of expertise for Cloud Counselage(company)?
+    - How does Cloud Counselage(company) help startups grow?
+    - What consulting solutions does Cloud Counselage(company) offer to businesses?
+    - Solutions offered by the company.
+    - How does Cloud Counselage(company) support small and medium enterprises?
+
+- intent: Cloud Counselage Social Initiatives
+  examples: |
+    - What is the Industry Academia Community initiative by Cloud Counselage(company)?
+    - How does Cloud Counselage(company) aim to reduce unemployability among Indian youth?
+    - What is the role of Cloud Counselage’s(company's) internship program?
+    - How does Cloud Counselage(company) contribute to the education sector through its initiatives?
+    - What social responsibility programs does Cloud Counselage(company) participate in?
+    - Can you explain Cloud Counselage's(company's) efforts in promoting industry-academia collaboration?
+    - How does Cloud Counselage(company) support skill development among young professionals?
+    - What measures does Cloud Counselage(company) take to empower youth in India?
+    - Could you describe the impact of Cloud Counselage's(company's) internship initiatives?
+    - What is the significance of Cloud Counselage's(company's) Industry Academia Community initiative?
+    - How does Cloud Counselage(company) foster innovation and learning in collaboration with universities?
+    - Can you provide examples of Cloud Counselage's(company's) partnerships with educational institutions?
+    - What role does Cloud Counselage(company) play in preparing students for future careers through its programs?
+    
+
+- intent: Cloud Counselage Differentiation
+  examples: |
+    - How does Cloud Counselage(company) differentiate itself from other consulting firms?
+    - What unique value does Cloud Counselage(company) bring to its clients?
+    - Can you provide examples of Cloud Counselage’s(company's) successful projects or initiatives?
+    - What sets Cloud Counselage(company) apart from its competitors in the consulting industry?
+    - How does Cloud Counselage(company) stand out from other consulting firms?
+    - What makes Cloud Counselage(company) unique in its approach to client services?
+    - Can you explain the distinctive aspects of Cloud Counselage's(company's) consulting methodology?
+    - How does Cloud Counselage(company) add value to its clients that other firms may not?
+    - Could you give me examples of successful projects executed by Cloud Counselage(company)?
+    - What are some notable achievements or milestones of Cloud Counselage(company)?
+    - How has Cloud Counselage(company) demonstrated its effectiveness in solving client challenges?
+    - Can you provide case studies that highlight Cloud Counselage's(company's) impact on client businesses?
+    - In what ways has Cloud Counselage(company) shown innovation or leadership in its industry?
+    
+
+- intent: Enquiry IAC
+  examples: |
+    - Can you explain the Industry-Academia Community?
+    - What does IAC stand for?
+    - Explain IAC.
+    - Can you tell me what IAC is?
+    - I want to learn about IAC.
+    - Give me information on IAC.
+    - What's the purpose of IAC?
+    - Could you describe IAC?
+    - IAC details, please.
+    - What is the role of IAC?
+    - I'd like to know about IAC.
+    - What does the Industry-Academia Community do?
+    - What services does IAC provide?
+    - How does IAC support students?
+    - What is the mission of IAC?    
+    
+- intent: More about IAC
+  examples: |
+    - Tell me more about Industry-Academia Community.
+    - What roles do we have in IAC?
+    - Can you give me more details about IAC?
+    - I want to know more about IAC.
+    - Provide more information on IAC.
+    - Explain more about the Industry-Academia Community.
+    - Can you tell me additional details about IAC?
+    - What else can you tell me about IAC?
+    - I'd like to learn more about IAC.
+    - Give me more insights into IAC.
+    - What other information do you have about IAC?
+    - Share more about Industry-Academia Community.
+    - Can you elaborate on IAC?
+    - What further details can you give me about IAC?
+    - Could you provide more details on IAC?
+    - What other roles are available in IAC?
+    - Are there more specifics you can tell me about IAC?
+    - What else should I know about the Industry-Academia Community?
+    - Can you explain further about IAC?
+    - What additional information can you share about IAC?
+
+- intent: Benefits of IAC
+  examples: |
+    - What are benefits of being part of IAC?
+    - Benefits of IAC
+    - Why should I consider becoming part of IAC?
+    - What are the perks of IAC membership?
+    - How does joining IAC benefit individuals or organizations?
+    - What are the reasons to join IAC?
+    - What advantages does IAC membership offer?
+    - How can being in IAC be advantageous for me?
+    - Advantages of IAC.
+    - Why would someone want to be a member of IAC?
+    - What do I gain by joining IAC?
+
+- intent: paid or free
+  examples: |
+    - Do I need to pay any fees to be a part of this community?
+    - Is there a membership fee for joining this community?
+    - Are there any charges to become a member?
+    - Do I need to pay to access the community services?
+    - Is this community free to join?
+    - Are there any costs associated with joining the community?
+    - Do I have to pay to be part of this group?
+    - Is there a subscription fee for this community?
+    - Are the community services available for free?
+    - What are the costs involved in joining this community?
+    - Is the membership for this community free of charge?
+
+- intent: participate all activities
+  examples: |
+    - Do I need to participate in all the activities?
+    - Is it mandatory to participate in all activities?
+    - Do I have to join every activity?
+    - Are all activities compulsory for members?
+    - Must I take part in every activity offered?
+    - Do I need to be involved in all the activities?
+    - Is it required to engage in all activities?
+    - Am I obligated to participate in every event?
+    - Are members expected to join all activities?
+    - Is full participation in all activities necessary?
+    - Can I choose which activities to participate in?
+
+- intent: work hours
+  examples: |
+    - How many hours of work are expected from me?
+    - What are the expected working hours?
+    - How long will I need to work each day?
+    - What is the daily time commitment?
+    - How many hours per week will I be working?
+    - What is the standard work schedule?
+    - How many hours a day am I expected to work?
+    - What are the required working hours?
+    - How many hours do I need to work?
+    - What are the hours I need to commit to?
+    - How long is the workday?
+
+- intent: mandatory to be a member
+  examples: |
+    - Is it necessary to become a member of Industry-Academia Community to avail the benefits?
+    - Do I have to be a member to access the benefits?
+    - Is membership required to get the benefits?
+    - Must I join the Industry-Academia Community to enjoy the benefits?
+    - Is it compulsory to become a member to avail the services?
+    - Do I need to sign up as a member to access the benefits?
+    - Are the benefits only available to members?
+    - Is it necessary to join the community to use the benefits?
+    - Is membership a prerequisite for the benefits?
+    - Do I need to be part of the community to get the benefits?
+    -Is joining the community mandatory for availing the benefits?
+    
+
+- intent: flexible in activities
+  examples: |
+    - Will I get the flexibility to participate in my activities at my convenience?
+    - Can I choose the timing for participating in activities?
+    - Is there flexibility in when I can join the activities?
+    - Will I be able to participate in activities according to my schedule?
+    - Are the activity timings flexible?
+    - Can I attend the activities at my own convenience?
+    - Is there an option to participate in activities as per my availability?
+    - Will I have the freedom to select when to engage in the activities?
+    - Are there flexible options for participating in the activities?
+
+- intent: program helpful
+  examples: |
+    - Has this program by company helped students earlier?
+    - Can you give examples of how this program has helped students before?
+    - Have previous students found this program useful?
+    - Could you share instances where students have benefited from this program?
+    - How effective has this program by company been in supporting students?
+    - What are some success stories from students who participated in this program?
+
+- intent: conducting internship
+  examples: |
+    - How will the internship be conducted?
+    - Can you explain the structure of the internship program by the company?
+    - Explain internship process.
+    - What are the key aspects of the internship arrangement?
+    - How do interns typically engage in this program by the company?
+    - What is the format of the internship experience?
+    - Could you outline the internship process?
+    - Can you provide details on how interns participate in the program?
+
+- intent: internship start time
+  examples: |
+    - When the internship is going to start?
+    - What is the start date for the internship?
+    - Start time of internship.
+    - Can you tell me when the internship begins?
+    - When does the internship program commence?
+    - Could you inform me of the internship start time?
+    - When should I expect the internship to start?
+    - What is the starting date for the internship?
+    - When will the internship kick off?
+
+- intent: where to apply
+  examples: |
+    - Where to apply for the internship?
+    - How do I apply for the internship?
+    - Can you tell me where to submit my internship application?
+    - What is the application process for the internship?
+    - Where can I find the internship application form?
+    - Where should I go to apply for the internship?
+    - Could you provide details on where to apply for the internship?
+    - What steps should I follow to apply for the internship?
+    - Where do I go to submit my internship application?
+
+- intent: selection criteria
+  examples: |
+    - What is the eligibility or selection criteria for participating in this internship?
+    - Any Selection process.
+    - What are the requirements to be eligible for the internship?
+    - Can you tell me the selection criteria for the internship?
+    - What qualifications are needed to apply for this internship?
+    - What do I need to qualify for the internship?
+    - Any qualifications for internship.
+    - Are there specific criteria for being selected for the internship?
+    - What is needed to be eligible for the internship program?
+    - Eligibility for internship program by company?
+    - Can you explain the eligibility criteria for the internship?
+    - What are the prerequisites for applying to the internship?
+    - What are the conditions to be considered for the internship?
+
+- intent: Grads and Freshers
+  examples: |
+    - Can graduates and freshers apply for this internship?
+    - Are recent graduates and freshers eligible for this internship?
+    - Is this internship open to both graduates and freshers?
+    - Can individuals who have just graduated and freshers participate in this internship?
+    - Are there opportunities for both graduates and freshers in this internship?
+    - Does this internship accept applications from recent graduates and freshers?
+    - Are graduates and newcomers eligible to apply for this internship?
+    - Can people who have graduated recently or fresh graduates apply for this internship?
+    - Is this internship suitable for graduates and freshers?
+    - Are there openings for both graduates and freshers in this internship program?
+
+- intent: Offer Letters and Certificates
+  examples: |
+    - Will there be Offer Letters and Certificates?
+    - Can I expect to receive an Offer Letter and Certificate upon completion?
+    - Are Offer Letters and Certificates provided for this internship?
+    - Do participants receive Offer Letters and Certificates at the end?
+    - Will I get an official Offer Letter and Certificate for this internship?
+    - Are Offer Letters and Certificates issued to interns?
+    - Is there a provision for Offer Letters and Certificates in this internship?
+    - What documentation will I receive, such as Offer Letters and Certificates?
+    - Are there formal documents like Offer Letters and Certificates associated with this internship?
+    - Can I obtain an Offer Letter and Certificate for completing this internship?
+
+- intent: Domains For Internship
+  examples: |
+    - What are various domains for internship by the company?
+    - Domains offered by the company?
+    - Which fields or domains are available for internships?
+    - Can you list the different areas or domains for internship opportunities?
+    - What are the internship domains or specializations offered?
+    - Which sectors or domains can I choose for internships by company?
+    - Are there specific fields or domains I can apply for in internships?
+    - What are the internship options across different domains?
+    - Could you provide information on the available internship domains?
+    - In which areas or domains does the internship program operate?
+    - What are the different internship categories or domains available?'
+
+- intent: Android Development
+  examples: |
+    - Can i choose [Android Development](domain) as the domain?
+    - Do you know about [Android Development](domain) internship?
+    - Do you know about [Android Development](domain)?
+    - What is [Android Development](domain) internship?
+    - What do we do in the [Android Development](domain) internship?
+    - Tell me about the [Android Development](domain) domain.
+    - What does the [Android Development](domain) internship involve?
+    - Can you explain the [Android Development](domain) domain?
+    - What projects are in the [Android Development](domain) domain?
+    - What skills will I learn in the [Android Development](domain) internship?
+    - What is covered in the [Android Development](domain) internship?
+    - What are the key topics in the [Android Development](domain) domain?
+    - What do we focus on in the [Android Development](domain) internship?
+    - Describe the [Android Development](domain) internship.
+    - What will I work on in the [Android Development](domain) domain?
+    - What do [Android Development](domain) interns do?
+    - What is the [Android Development](domain) internship about?
+    - Can you tell me more about the [Android Development](domain) domain?
+    - What is involved in the [Android Development](domain) internship? 
+
+- intent: Artificial Intelligence
+  examples: |
+    - Can i choose [Artificial Intelligence](domain) as the domain?
+    - Can i choose [ai](domain) as the domain?
+    - Do you know about [Artificial Intelligence](domain) internship?
+    - Do you know about [Artificial Intelligence](domain)?
+    - What is [Artificial Intelligence](domain) internship?
+    - What is [AI](domain) internship? 
+    - What do we do in the [Artificial Intelligence](domain) internship?
+    - Tell me about the [Artificial Intelligence](domain) domain.
+    - What does the [Artificial Intelligence](domain) internship involve?
+    - Can you explain the [Artificial Intelligence](domain) domain?
+    - What projects are in the [Artificial Intelligence](domain) domain?
+    - What skills will I learn in the [Artificial Intelligence](domain) internship?
+    - What is covered in the [Artificial Intelligence](domain) internship?
+    - What are the key topics in the [Artificial Intelligence](domain) domain?
+    - What do we focus on in the [Artificial Intelligence](domain) internship?
+    - Describe the [Artificial Intelligence](domain) internship.
+    - What will I work on in the [Artificial Intelligence](domain) domain?
+    - What will I work on in the [ai](domain) domain?
+    - What do [Artificial Intelligence](domain) interns do?
+    - What is the [Artificial Intelligence](domain) internship about?
+    - Can you tell me more about the [Artificial Intelligence](domain) domain?
+    - What is involved in the [Artificial Intelligence](domain) internship? 
+
+- intent: Business Research
+  examples: |
+    - Can i choose [Business Research](domain) as the domain?
+    - Do you know about [Business Research](domain) internship?
+    - Do you know about [Business Research](domain)?
+    - What is [Business Research](domain) internship?
+    - What do we do in the [Business Research](domain) internship?
+    - Tell me about the [Business Research](domain) domain.
+    - What does the [Business Research](domain) internship involve?
+    - Can you explain the [Business Research](domain) domain?
+    - What projects are in the [Business Research](domain) domain?
+    - What skills will I learn in the [Business Research](domain) internship?
+    - What is covered in the [Business Research](domain) internship?
+    - What are the key topics in the [Business Research](domain) domain?
+    - What do we focus on in the [Business Research](domain) internship?
+    - Describe the [Business Research](domain) internship.
+    - What will I work on in the [Business Research](domain) domain?
+    - What do [Business Research](domain) interns do?
+    - What is the [Business Research](domain) internship about?
+    - Can you tell me more about the [Business Research](domain) domain?
+    - What is involved in the [Business Research](domain) internship? 
+
+- intent: Business Development
+  examples: |
+    - Can i choose [Business Development](domain) as the domain?
+    - Do you know about [Business Development](domain) internship?
+    - Do you know about [Business Development](domain)?
+    - What is [Business Development](domain) internship?
+    - What do we do in the [Business Development](domain) internship?
+    - Tell me about the [Business Development](domain) domain.
+    - What does the [Business Development](domain) internship involve?
+    - Can you explain the [Business Development](domain) domain?
+    - What projects are in the [Business Development](domain) domain?
+    - What skills will I learn in the [Business Development](domain) internship?
+    - What is covered in the [Business Development](domain) internship?
+    - What are the key topics in the [Business Development](domain) domain?
+    - What do we focus on in the [Business Development](domain) internship?
+    - Describe the [Business Development](domain) internship.
+    - What will I work on in the [Business Development](domain) domain?
+    - What do [Business Development](domain) interns do?
+    - What is the [Business Development](domain) internship about?
+    - Can you tell me more about the [Business Development](domain) domain?
+    - What is involved in the [Business Development](domain) internship? 
+    
+
+- intent: Blockchain
+  examples: |
+    - Can i choose [Blockchain](domain) as the domain?
+    - Do you know about [Blockchain](domain) internship?
+    - Do you know about [Blockchain](domain)?
+    - What is [Blockchain](domain) internship?
+    - What do we do in the [Blockchain](domain) internship?
+    - Tell me about the [Blockchain](domain) domain.
+    - What does the [Blockchain](domain) internship involve?
+    - Can you explain the [Blockchain](domain) domain?
+    - What projects are in the [Blockchain](domain) domain?
+    - What skills will I learn in the [Blockchain](domain) internship?
+    - What is covered in the [Blockchain](domain) internship?
+    - What are the key topics in the [Blockchain](domain) domain?
+    - What do we focus on in the [Blockchain](domain) internship?
+    - Describe the [Blockchain](domain) internship.
+    - What will I work on in the [Blockchain](domain) domain?
+    - What do [Blockchain](domain) interns do?
+    - What is the [Blockchain](domain) internship about?
+    - Can you tell me more about the [Blockchain](domain) domain?
+    - What is involved in the [Blockchain](domain) internship? 
+
+- intent: Cloud Computing
+  examples: |
+    - Can i choose [Cloud Computing](domain) as the domain?
+    - Do you know about [Cloud Computing](domain) internship?
+    - Do you know about [Cloud Computing](domain)?
+    - What is [Cloud Computing](domain) internship?
+    - What do we do in the [Cloud Computing](domain) internship?
+    - Tell me about the [Cloud Computing](domain) domain.
+    - What does the [Cloud Computing](domain) internship involve?
+    - Can you explain the [Cloud Computing](domain) domain?
+    - What projects are in the [Cloud Computing](domain) domain?
+    - What skills will I learn in the [Cloud Computing](domain) internship?
+    - What is covered in the [Cloud Computing](domain) internship?
+    - What are the key topics in the [Cloud Computing](domain) domain?
+    - What do we focus on in the [Cloud Computing](domain) internship?
+    - Describe the [Cloud Computing](domain) internship.
+    - What will I work on in the [Cloud Computing](domain) domain?
+    - What do [Cloud Computing](domain) interns do?
+    - What is the [Cloud Computing](domain) internship about?
+    - Can you tell me more about the [Cloud Computing](domain) domain?
+    - What is involved in the [Cloud Computing](domain) internship? 
+
+- intent: Cyber Security
+  examples: |
+    - Can i choose [Cyber Security](domain) as the domain?
+    - Do you know about [Cyber Security](domain) internship?
+    - Do you know about [Cyber Security](domain)?
+    - What is [Cyber Security](domain) internship?
+    - What do we do in the [Cyber Security](domain) internship?
+    - Tell me about the [Cyber Security](domain) domain.
+    - What does the [Cyber Security](domain) internship involve?
+    - Can you explain the [Cyber Security](domain) domain?
+    - What projects are in the [Cyber Security](domain) domain?
+    - What skills will I learn in the [Cyber Security](domain) internship?
+    - What is covered in the [Cyber Security](domain) internship?
+    - What are the key topics in the [Cyber Security](domain) domain?
+    - What do we focus on in the [Cyber Security](domain) internship?
+    - Describe the [Cyber Security](domain) internship.
+    - What will I work on in the [Cyber Security](domain) domain?
+    - What do [Cyber Security](domain) interns do?
+    - What is the [Cyber Security](domain) internship about?
+    - Can you tell me more about the [Cyber Security](domain) domain?
+    - What is involved in the [Cyber Security](domain) internship? 
+
+- intent: Digital Marketing
+  examples: |
+    - Can i choose [Digital Marketing](domain) as the domain?
+    - Do you know about [Digital Marketing](domain) internship?
+    - Do you know about [Digital Marketing](domain)?
+    - What is [Digital Marketing](domain) internship?
+    - What do we do in the [Digital Marketing](domain) internship?
+    - Tell me about the [Digital Marketing](domain) domain.
+    - What does the [Digital Marketing](domain) internship involve?
+    - Can you explain the [Digital Marketing](domain) domain?
+    - What projects are in the [Digital Marketing](domain) domain?
+    - What skills will I learn in the [Digital Marketing](domain) internship?
+    - What is covered in the [Digital Marketing](domain) internship?
+    - What are the key topics in the [Digital Marketing](domain) domain?
+    - What do we focus on in the [Digital Marketing](domain) internship?
+    - Describe the [Digital Marketing](domain) internship.
+    - What will I work on in the [Digital Marketing](domain) domain?
+    - What do [Digital Marketing](domain) interns do?
+    - What is the [Digital Marketing](domain) internship about?
+    - Can you tell me more about the [Digital Marketing](domain) domain?
+    - What is involved in the [Digital Marketing](domain) internship? 
+
+- intent: DevOps
+  examples: |
+    - Can i choose [DevOps](domain) as the domain?
+    - Do you know about [DevOps](domain) internship?
+    - Do you know about [DevOps](domain)?
+    - What is [DevOps](domain) internship?
+    - What do we do in the [DevOps](domain) internship?
+    - Tell me about the [DevOps](domain) domain.
+    - What does the [DevOps](domain) internship involve?
+    - Can you explain the [DevOps](domain) domain?
+    - What projects are in the [DevOps](domain) domain?
+    - What skills will I learn in the [DevOps](domain) internship?
+    - What is covered in the [DevOps](domain) internship?
+    - What are the key topics in the [DevOps](domain) domain?
+    - What do we focus on in the [DevOps](domain) internship?
+    - Describe the [DevOps](domain) internship.
+    - What will I work on in the [DevOps](domain) domain?
+    - What do [DevOps](domain) interns do?
+    - What is the [DevOps](domain) internship about?
+    - Can you tell me more about the [DevOps](domain) domain?
+    - What is involved in the [DevOps](domain) internship? 
+
+ 
+- intent: Data Analytics
+  examples: |
+    - Can i choose [Data Analytics](domain) as the domain?
+    - Can i choose [DA](domain) as the domain?
+    - Do you know about [Data Analytics](domain) internship?
+    - Do you know about [Data Analytics](domain)?
+    - What is [Data Analytics](domain) internship?
+    - What is [da](domain) internship?
+    - What do we do in the [Data Analytics](domain) internship?
+    - Tell me about the [Data Analytics](domain) domain.
+    - What does the [Data Analytics](domain) internship involve?
+    - Can you explain the [Data Analytics](domain) domain?
+    - What projects are in the [Data Analytics](domain) domain?
+    - What skills will I learn in the [Data Analytics](domain) internship?
+    - What is covered in the [Data Analytics](domain) internship?
+    - What are the key topics in the [Data Analytics](domain) domain?
+    - What do we focus on in the [Data Analytics](domain) internship?
+    - What do we focus on in the [DA](domain) internship?
+    - Describe the [Data Analytics](domain) internship.
+    - What will I work on in the [Data Analytics]](domain) domain?
+    - What do [Data Analytics](domain) interns do?
+    - What is the [Data Analytics](domain) internship about?
+    - Can you tell me more about the [Data Analytics](domain) domain?
+    - What is involved in the [Data Analytics](domain) internship? 
+
+
+- intent: Flutter
+  examples: |
+    - Can i choose [Flutter](domain) as the domain?
+    - Do you know about [Flutter](domain) internship?
+    - Do you know about [Flutter](domain)?
+    - What is [Flutter](domain) internship?
+    - What do we do in the [Flutter](domain) internship?
+    - Tell me about the [Flutter](domain) domain.
+    - What does the [Flutter](domain) internship involve?
+    - Can you explain the [Flutter](domain) domain?
+    - What projects are in the [Flutter](domain) domain?
+    - What skills will I learn in the [Flutter](domain) internship?
+    - What is covered in the [Flutter](domain) internship?
+    - What are the key topics in the [Flutter](domain) domain?
+    - What do we focus on in the [Flutter](domain) internship?
+    - Describe the [Flutter](domain) internship.
+    - What will I work on in the [Flutter](domain) domain?
+    - What do [Flutter](domain) interns do?
+    - What is the [Flutter](domain) internship about?
+    - Can you tell me more about the [Flutter](domain) domain?
+    - What is involved in the [Flutter](domain) internship? 
+
+- intent: Full Stack
+  examples: |
+    - Can i choose [Full Stack](domain) as the domain?
+    - Do you know about [Full Stack](domain) internship?
+    - Do you know about [Full Stack](domain)?
+    - What is [Full Stack](domain) internship?
+    - What do we do in the [Full Stack](domain) internship?
+    - Tell me about the [Full Stack](domain) domain.
+    - What does the [Full Stack](domain) internship involve?
+    - Can you explain the [Full Stack](domain) domain?
+    - What projects are in the [Full Stack](domain) domain?
+    - What skills will I learn in the [Full Stack](domain) internship?
+    - What is covered in the [Full Stack](domain) internship?
+    - What are the key topics in the [Full Stack](domain) domain?
+    - What do we focus on in the [Full Stack](domain) internship?
+    - Describe the [Full Stack](domain) internship.
+    - What will I work on in the [Full Stack](domain) domain?
+    - What do [Full Stack](domain) interns do?
+    - What is the [Full Stack](domain) internship about?
+    - Can you tell me more about the [Full Stack](domain) domain?
+    - What is involved in the [Full Stack](domain) internship? 
+
+- intent: Game Development
+  examples: |
+    - Can i choose [Game Development](domain) as the domain?
+    - Do you know about [Game Development](domain) internship?
+    - Do you know about [Game Development](domain)?
+    - What is [Game Development](domain) internship?
+    - What do we do in the [Game Development](domain) internship?
+    - Tell me about the [Game Development](domain) domain.
+    - What does the [Game Development](domain) internship involve?
+    - Can you explain the [Game Development](domain) domain?
+    - What projects are in the [Game Development](domain) domain?
+    - What skills will I learn in the [Game Development](domain) internship?
+    - What is covered in the [Game Development](domain) internship?
+    - What are the key topics in the [Game Development](domain) domain?
+    - What do we focus on in the [Game Development](domain) internship?
+    - Describe the [Game Development](domain) internship.
+    - What will I work on in the [Game Development](domain) domain?
+    - What do [Game Development](domain) interns do?
+    - What is the [Game Development](domain) internship about?
+    - Can you tell me more about the [Game Development](domain) domain?
+    - What is involved in the [Game Development](domain) internship? 
+
+- intent: Human Resources
+  examples: |
+    - Can i choose [Human Resources](domain) as the domain?
+    - Can i choose [HR] as the domain?
+    - Do you know about [Human Resources](domain) internship?
+    - Do you know about [Human Resources](domain)?
+    - What is [Human Resources](domain) internship?
+    - What is [hr](domain) internship?
+    - What do we do in the [Human Resources](domain) internship?
+    - Tell me about the [Human Resources](domain) domain.
+    - What does the [Human Resources](domain) internship involve?
+    - Can you explain the [Human Resources](domain) domain?
+    - What projects are in the [Human Resources](domain) domain?
+    - what projects are in the [HR](domain) domain?
+    - What skills will I learn in the [Human Resources](domain) internship?
+    - What is covered in the [Human Resources](domain) internship?
+    - What are the key topics in the [Human Resources](domain) domain?
+    - What do we focus on in the [Human Resources](domain) internship?
+    - Describe the [Human Resources](domain) internship.
+    - What will I work on in the [Human Resources](domain) domain?
+    - What do [Human Resources](domain) interns do?
+    - What is the [Human Resources](domain) internship about?
+    - what is the [hr](domain) internship?
+    - Can you tell me more about the [Human Resources](domain) domain?
+    - What is involved in the [Human Resources](domain) internship? 
+
+
+- intent: Java
+  examples: |
+    - Can i choose [Java](domain) as the domain?
+    - Do you know about [Java](domain) internship?
+    - Do you know about [Java](domain)?
+    - What is [Java](domain) internship?
+    - What do we do in the [Java](domain) internship?
+    - Tell me about the [Java](domain) domain.
+    - What does the [Java](domain) internship involve?
+    - Can you explain the [Java](domain) domain?
+    - What projects are in the [Java](domain) domain?
+    - What skills will I learn in the [Java](domain) internship?
+    - What is covered in the [Java](domain) internship?
+    - What are the key topics in the [Java](domain) domain?
+    - What do we focus on in the [Java](domain) internship?
+    - Describe the [Java](domain) internship.
+    - What will I work on in the [Java](domain) domain?
+    - What do [Java](domain) interns do?
+    - What is the [Java](domain) internship about?
+    - Can you tell me more about the [Java](domain) domain?
+    - What is involved in the [Java](domain) internship? 
+
+- intent: Machine learning
+  examples: |
+    - Can i choose [Machine learning](domain) as the domain?
+    - Can i choose [ML] as the domain?
+    - Do you know about [Machine learning](domain) internship?
+    - Do you know about [Machine learning](domain)?
+    - What is [Machine learning](domain) internship?
+    - What do we do in the [Machine learning](domain) internship?
+    - Tell me about the [Machine learning](domain) domain.
+    - What does the [Machine learning](domain) internship involve?
+    - What does the [ML](domain) internship involve?
+    - Can you explain the [Machine learning](domain) domain?
+    - What projects are in the [Machine learning](domain) domain?
+    - What skills will I learn in the [Machine learning](domain) internship?
+    - What is covered in the [Machine learning](domain) internship?
+    - What are the key topics in the [Machine learning](domain) domain?
+    - What do we focus on in the [Machine learning](domain) internship?
+    - Describe the [Machine learning](domain) internship.
+    - What will I work on in the [Machine learning](domain) domain?
+    - What do [Machine learning](domain) interns do?
+    - what do [ml](domain) interns do?
+    - What is the [Machine learning](domain) internship about?
+    - Can you tell me more about the [Machine learning](domain) domain?
+    - What is involved in the [Machine learning](domain) internship? 
+
+- intent: Node.js
+  examples: |
+    - Can i choose [Node.js](domain) as the domain?
+    - Do you know about [Node.js](domain) internship?
+    - Do you know about [Node.js](domain)?
+    - What is [Node.js](domain) internship?
+    - What do we do in the [Node.js](domain) internship?
+    - Tell me about the [Node.js](domain) domain.
+    - What does the [Node.js](domain) internship involve?
+    - Can you explain the [Node.js](domain) domain?
+    - What projects are in the [Node.js](domain) domain?
+    - What skills will I learn in the [Node.js](domain) internship?
+    - What is covered in the [Node.js](domain) internship?
+    - What are the key topics in the [Node.js](domain) domain?
+    - What do we focus on in the [Node.js](domain) internship?
+    - Describe the [Node.js](domain) internship.
+    - What will I work on in the [Node.js](domain) domain?
+    - What do [Node.js](domain) interns do?
+    - What is the [Node.js](domain) internship about?
+    - Can you tell me more about the [Node.js](domain) domain?
+    - What is involved in the [Node.js](domain) internship? 
+
+- intent: Operations Management
+  examples: |
+    - Can i choose [Operations Management](domain) as the domain?
+    - Do you know about [Operations Management](domain) internship?
+    - Do you know about [Operations Management](domain)?
+    - What is [Operations Management](domain) internship?
+    - What do we do in the [Operations Management](domain) internship?
+    - Tell me about the [Operations Management](domain) domain.
+    - What does the [Operations Management](domain) internship involve?
+    - Can you explain the [Operations Management](domain) domain?
+    - What projects are in the [Operations Management](domain) domain?
+    - What skills will I learn in the [Operations Management](domain) internship?
+    - What is covered in the [Operations Management](domain) internship?
+    - What are the key topics in the [Operations Management](domain) domain?
+    - What do we focus on in the [Operations Management](domain) internship?
+    - Describe the [Operations Management](domain) internship.
+    - What will I work on in the [Operations Management](domain) domain?
+    - What do [Operations Management](domain) interns do?
+    - What is the [Operations Management](domain) internship about?
+    - Can you tell me more about the [Operations Management](domain) domain?
+    - What is involved in the [Operations Management](domain) internship? 
+
+
+- intent: Python
+  examples: |
+    - Can i choose [Python](domain) as the domain?
+    - Do you know about [Python](domain) internship?
+    - Do you know about [Python](domain)?
+    - What is [Python](domain) internship?
+    - What do we do in the [Python](domain) internship?
+    - Tell me about the [Python](domain) domain.
+    - What does the [Python](domain) internship involve?
+    - Can you explain the [Python](domain) domain?
+    - What projects are in the [Python](domain) domain?
+    - What skills will I learn in the [Python](domain) internship?
+    - What is covered in the [Python](domain) internship?
+    - What are the key topics in the [Python](domain) domain?
+    - What do we focus on in the [Python](domain) internship?
+    - Describe the [Python](domain) internship.
+    - What will I work on in the [Python](domain) domain?
+    - What do [Python](domain) interns do?
+    - What is the [Python](domain) internship about?
+    - Can you tell me more about the [Python](domain) domain?
+    - What is involved in the [Python](domain) internship? 
+
+- intent: Product Management
+  examples: |
+    - Can i choose [Product Management](domain) as the domain?
+    - Do you know about [Product Management](domain) internship?
+    - Do you know about [Product Management](domain)?
+    - What is [Product Management](domain) internship?
+    - What do we do in the [Product Management](domain) internship?
+    - Tell me about the [Product Management](domain) domain.
+    - What does the [Product Management](domain) internship involve?
+    - Can you explain the [Product Management](domain) domain?
+    - What projects are in the [Product Management](domain) domain?
+    - What skills will I learn in the [Product Management](domain) internship?
+    - What is covered in the [Product Management](domain) internship?
+    - What are the key topics in the [Product Management](domain) domain?
+    - What do we focus on in the [Product Management](domain) internship?
+    - Describe the [Product Management](domain) internship.
+    - What will I work on in the [Product Management](domain) domain?
+    - What do [Product Management](domain) interns do?
+    - What is the [Product Management](domain) internship about?
+    - Can you tell me more about the [Product Management](domain) domain?
+    - What is involved in the [Product Management](domain) internship? 
+
+- intent: Project Management
+  examples: |
+    - Can i choose [Project Management](domain) as the domain?
+    - Do you know about [Project Management](domain) internship?
+    - Do you know about [Project Management](domain)?
+    - What is [Project Management](domain) internship?
+    - What do we do in the [Project Management](domain) internship?
+    - Tell me about the [Project Management](domain) domain.
+    - What does the [Project Management](domain) internship involve?
+    - Can you explain the [Project Management](domain) domain?
+    - What projects are in the [Project Management](domain) domain?
+    - What skills will I learn in the [Project Management](domain) internship?
+    - What is covered in the [Project Management](domain) internship?
+    - What are the key topics in the [Project Management](domain) domain?
+    - What do we focus on in the [Project Management](domain) internship?
+    - Describe the [Project Management](domain) internship.
+    - What will I work on in the [Project Management](domain) domain?
+    - What do [Project Management](domain) interns do?
+    - What is the [Project Management](domain) internship about?
+    - Can you tell me more about the [Project Management](domain) domain?
+    - What is involved in the [Project Management](domain) internship? 
+
+- intent: Quality Assurance
+  examples: |
+    - Can i choose [Quality Assurance](domain) as the domain?
+    - Can i choose [QA](domain) as the domain?
+    - Do you know about [Quality Assurance](domain) internship?
+    - Do you know about [Quality Assurance](domain)?
+    - What is [Quality Assurance](domain) internship?
+    - what is [qa](domain) internship?
+    - What do we do in the [Quality Assurance](domain) internship?
+    - Tell me about the [Quality Assurance](domain) domain.
+    - What does the [Quality Assurance](domain) internship involve?
+    - Can you explain the [Quality Assurance](domain) domain?
+    - Can you explain the [QA](domain) domain?
+    - What projects are in the [Quality Assurance](domain) domain?
+    - What skills will I learn in the [Quality Assurance](domain) internship?
+    - What is covered in the [Quality Assurance](domain) internship?
+    - What are the key topics in the [Quality Assurance](domain) domain?
+    - What do we focus on in the [Quality Assurance](domain) internship?
+    - Describe the [Quality Assurance](domain) internship.
+    - Desrcibe the [qa](domain) internship.
+    - What will I work on in the [Quality Assurance](domain) domain?
+    - What do [Quality Assurance](domain) interns do?
+    - What is the [Quality Assurance](domain) internship about?
+    - Can you tell me more about the [Quality Assurance](domain) domain?
+    - What is involved in the [Quality Assurance](domain) internship? 
+
+- intent: React JS
+  examples: |
+    - Can i choose [React JS](domain) as the domain?
+    - Do you know about [React JS](domain) internship?
+    - Do you know about [React JS](domain)?
+    - What is [React JS](domain) internship?
+    - What do we do in the [React JS](domain) internship?
+    - Tell me about the [React JS](domain) domain.
+    - What does the [React JS](domain) internship involve?
+    - Can you explain the [React JS](domain) domain?
+    - What projects are in the [React JS](domain) domain?
+    - What skills will I learn in the [React JS](domain) internship?
+    - What is covered in the [React JS](domain) internship?
+    - What are the key topics in the [React JS](domain) domain?
+    - What do we focus on in the [React JS](domain) internship?
+    - Describe the [React JS](domain) internship.
+    - What will I work on in the [React JS](domain) domain?
+    - What do [React JS](domain) interns do?
+    - What is the [React JS](domain) internship about?
+    - Can you tell me more about the [React JS](domain) domain?
+    - What is involved in the [React JS](domain) internship? 
+
+- intent: UI UX
+  examples: |
+    - Can i choose [UI UX](domain) as the domain?
+    - Do you know about [UI UX](domain) internship?
+    - Do you know about [UI UX](domain)?
+    - What is [UI UX](domain) internship?
+    - What do we do in the [UI UX](domain) internship?
+    - Tell me about the [UI UX](domain) domain.
+    - What does the [UI UX](domain) internship involve?
+    - Can you explain the [UI UX](domain) domain?
+    - What projects are in the [UI UX](domain) domain?
+    - What skills will I learn in the [UI UX](domain) internship?
+    - What is covered in the [UI UX](domain) internship?
+    - What are the key topics in the [UI UX](domain) domain?
+    - What do we focus on in the [UI UX](domain) internship?
+    - Describe the [UI UX](domain) internship.
+    - What will I work on in the [UI UX](domain) domain?
+    - What do [UI UX](domain) interns do?
+    - What is the [UI UX](domain) internship about?
+    - Can you tell me more about the [UI UX](domain) domain?
+    - What is involved in the [UI UX](domain) internship? 
+
+- intent: Web Development
+  examples: |
+    - Can i choose [Web Development](domain) as the domain?
+    - Can i choose [webd](domain) as the domain?
+    - Do you know about [Web Development](domain) internship?
+    - Do you know about [Web Development](domain)?
+    - What is [Web Development](domain) internship?
+    - What do we do in the [Web Development](domain) internship?
+    - Tell me about the [Web Development](domain) domain.
+    - What does the [Web Development](domain) internship involve?
+    - Can you explain the [Web Development](domain) domain?
+    - What projects are in the [Web Development](domain) domain?
+    - What skills will I learn in the [Web Development](domain) internship?
+    - What is covered in the [Web Development](domain) internship?
+    - What is covered in the [webd](domain) internship?
+    - What are the key topics in the [Web Development](domain) domain?
+    - What do we focus on in the [Web Development](domain) internship?
+    - Describe the [Web Development](domain) internship.
+    - What will I work on in the [Web Development](domain) domain?
+    - What do [Web Development](domain) interns do?
+    - What is the [Web Development](domain) internship about?
+    - Can you tell me more about the [Web Development](domain) domain?
+    - What is involved in the [Web Development](domain) internship? 
+
+- intent: Domain Change
+  examples: |
+    - Will participants be able to choose/change the domain & duration for internship?
+    - can i change domain?
+    - Is it possible to select a different domain or modify the internship duration?
+    - Can interns switch domains or alter the duration of their internship?
+    - Are participants allowed to change their chosen domain or internship duration?
+    - Is there flexibility to switch between different domains during the internship?
+    - Can interns modify their selected domain or adjust the internship duration?
+    - Will interns have the option to change their internship domain or duration if needed?
+    - How flexible is the internship program in terms of domain selection and duration changes?
+    - Are interns permitted to change their internship field or adjust the duration?
+    - Is there an option for interns to switch domains or extend/reduce the internship duration?
+
+- intent: choose domain
+  examples: |
+    - How to choose the domain?
+    - What is the process for selecting a domain provided by company?
+    - How can I decide which domain to choose?
+    - Can you explain how to pick a domain for the internship?
+    - What steps should I follow to select a specific domain?
+    - Is there a procedure for choosing the internship domain?
+    - How do I indicate my preference for a particular domain?
+    - What are the criteria for choosing a domain in the internship program?
+    - Can you guide me on how to make a domain selection for the internship?
+    - How should I go about choosing the domain for my internship?
+
+- intent: help during project
+  examples: |
+    - Will participants get any help during the project?
+    - Do i get any help for project?
+    - Is there support available for participants during their projects?
+    - Can participants expect help or guidance during their project work?
+    - What kind of assistance is provided to participants during their projects?
+    - Are there resources or mentors available to help participants with their projects?
+    - Will there be any support or mentorship offered during the project?
+    - How is assistance provided to participants during their project assignments?
+    - Is there assistance available if participants encounter difficulties during their projects?
+    - Are participants guided or supported throughout their project duration?
+    - Can participants seek help if they face challenges during their projects?
+
+- intent: completion of internship
+  examples: |
+    - What is successful completion of internship?
+    - What is considered successful completion of the internship?
+    - How is the internship successfully completed?
+    - Can you explain the criteria for completing the internship?
+    - What are the requirements to successfully finish the internship?
+    - How do participants know when they have completed the internship?
+    - What constitutes the completion criteria for the internship?
+    - Is there a checklist or criteria for internship completion?
+    - How do interns demonstrate they have completed the int  ernship?
+    - What steps are involved in completing the internship program?
+    - What does it mean to complete the internship successfully?
+
+- intent: more than one domain
+  examples: |
+    - Can participants intern in more than one domain simultaneously?
+    - Is it possible to undertake internships in multiple domains at the same time?
+    - Can interns engage in internships across multiple domains concurrently?
+    - Are participants allowed to intern in more than one domain simultaneously?
+    - Is there an option for interns to work in multiple domains simultaneously?
+    - Can interns pursue internships in different domains simultaneously?
+    - Are interns permitted to intern in more than one domain concurrently?
+    - Is there flexibility to intern in multiple domains simultaneously?
+    - Can participants undertake internships in multiple fields or domains simultaneously?
+    - Is it feasible to intern in more than one domain simultaneously?
+
+- intent: laptop required
+  examples: |
+    - What do we require to start the internship?
+    - Requirements for the internship.
+    - Do we have any essentials to commence the internship?
+    - Any Essentials for internship?.
+    - Do we require laptop specifically for the project?
+    - Are participants expected to use their own laptops for the project?
+    - Do interns need to bring their own laptops for the project?
+    - Is it essential to have access to a laptop for project-related work?
+    - Any electronic gadgets required?
+    - Is Internet connection needed?
+
+- intent: group for updates or information
+  examples: |
+    - Is there any group for updates/information?
+    - Are there any communication channels for receiving updates or information?
+    - How can I stay informed about updates and information regarding the internship?
+    - Are there forums or groups for receiving regular updates and information?
+    - Is there a platform where updates and information are regularly posted?
+    - How are updates and information distributed to participants?
+    - Where can I find updates and information about the internship program?
+    - do you have social media apps to communicate?
+    - do you have instagram for updates?
+    - Are updates are informed in twitter or X?
+    - Can you send me the telegram channel link for updates?
+    - Is there a whatsapp group?
+
+- intent: fallback
+  examples: |
+    - Sorry, I didn't understand that. Could you please rephrase?
+    - I'm not sure I understand. Can you ask in a different way?
+    - Can you provide more details or specify what you mean?
+    - I'm sorry, I don't have information on that right now.
